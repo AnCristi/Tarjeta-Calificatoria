@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 24%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+
+
+body {
+    font-family: "Overpass", sans-serif;
+    background-color:var(--Very-Dark-Blue);
+    font-size: 15px;
+    
+}
+
+/*-----filtro para q se vea solo 1 tarjeta------
+.rating-state{
+    display: none; 
+}
+
+.thankyou-state  {
+    display: none;
+}
+----END--filtro para q se vea solo 1 tarjeta------*/ 
+
+.rating-state,.thankyou-state  {
+    background-color: var(--Dark-Blue);
+    width: 327px;
+    height: 364px;
+    border-radius: 16px;
+    margin: 195px auto 80px;
+    padding: 24px;
+}
+
+.rating-state_icon-container, .rating-state_number-container_number {
+    background-color: var(--Medium-Grey);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-bottom: 22px;
+    color: var(--Light-Grey);
+    border:none;
+}
+
+.rating-state_title, .thankyou-state_title{
+    color: var(--White);
+    margin-bottom: 22px;
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+.rating-state_description, .thankyou-state_paragraph{
+    color: var(--Light-Grey);
+    font-size: 14px;
+    margin-bottom: 30px;
+   
+}
+
+.rating-state_number-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.rating-state_number-container_number:hover {
+    background-color: var(--Light-Grey);
+    cursor: pointer;
+    color: var(--White);
+
+}
+
+.rating-state_number-container_number:focus{
+    background-color: var(--Orange);
+    color: var(--White);
+
+}
+
+
+.rating-state_button{
+    background-color: var(--Orange);
+    color: var(--White);    
+    width: 100%;/*288px;*/
+    height: 47px;
+    border-radius:37px;
+    border: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    
+}
+
+.rating-state_button:hover{
+    cursor: pointer;
+    background-color: var(--White);
+    color: var(--Orange); 
+
+}
+
+/*---------------------thankyou state-----------------*/
+
+.thankyou-state{
+
+    /*background-color: var(--Medium-Grey);
+    width: 70%;
+    height: 17px;
+    text-align: center;
+    border-radius: 25px ;
+    color: var(--Orange);
+    margin-bottom: 30px;
+    margin-top: 30px;*/
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.thankyou-state_image{
+    width: 150px;
+    margin-bottom: 25px;
+}
+
+.thankyou-state_result{
+    background-color: var(--Medium-Grey);
+    color: var(--Orange);
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 8px 0;
+    width: 175px;
+    height: 37px;
+    border-radius: 50px;
+    font-size: 0.9em;
+}
+.thankyou-state_paragraph{
+    text-align: center;
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+ }
+
+.attribution a {
+     color: hsl(228, 45%, 44%);
+     }
+
+/*----------------------DESKTOP----------------------*/
+
+@media (min-width: 600px){
+           
+    .rating-state, .thankyou-state{
+        
+        width: 412px;
+        height: 412px;
+        padding: 34px;
+
+
+    }
+
+    .rating-state_icon-container, .rating-state_number-container_number {
+        
+        width: 50px;
+        height: 50px;
+        
+    }
+
+
+    .rating-state_title, .thankyou-state_title{
+        
+        font-size: 1.9em;
+        
+    }
+
+
+    .rating-state_description, .thankyou-state_paragraph{
+        
+        font-size: 1.07em;
+        
+    }
+
+    .thankyou-state_result{
+        
+        font-size: 1em;
+        width: 196px;
+
+    }
+
+   
+}
+
+footer{
+    color: var(--White);
+    font-size: 15px;
+}
+ 
